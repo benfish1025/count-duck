@@ -1,0 +1,35 @@
+/*
+    background-color: #ffdfe0;
+    color: #ea2b2b;
+
+    background-color: #ff4b4b;
+------------------------------------
+    background-color: #d7ffb8;
+    color: #58a700;
+
+
+*/
+.message-wrapper {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #E9EBF0;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.check {
+    opacity: 0.2;
+    animation-name: twoTrans;
+    animation-duration: 1.2s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+}
+
+

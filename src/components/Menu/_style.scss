@@ -1,0 +1,197 @@
+.menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  &--horizontal {
+    border-bottom: 2px solid #e5e5e5;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  &--vertical {
+    width: 275px;
+    border-right: 2px solid #e5e5e5;
+    flex-direction: column;
+  }
+  &-item {
+    background-color: #fff;
+    display: inline-block;
+    padding: 15px 12px 15px 12px;
+    text-wrap: none;
+    color: #777777;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .8px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: border 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 50ms, color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 50ms, background-color  0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #e5e5e5;
+      &:hover {
+        color: #e5e5e5;
+        border-color: #e5e5e5;
+      }
+    }
+    &--horizontal {
+      text-align: center;
+      border-bottom: 2px solid #e5e5e5;
+      &.is-active {
+        color: #1cb0f6;
+        border-bottom: 2px solid #1cb0f6;
+        & > .spread-icon > svg > path {
+          fill: #1cb0f6;
+        }
+      }
+      &:hover {
+        border-bottom: 2px solid #1cb0f6;
+        color: #1cb0f6;
+      }
+    }
+    &--vertical {
+      text-align: left;
+      width: 100%;
+      border-right: 2px solid #e5e5e5;
+      margin-right: -2px;
+      padding-left: 30px;
+      &.is-active {
+        color: #1cb0f6;
+        border-right: 2px solid #1cb0f6;
+      }
+      &:hover {
+        color: #1cb0f6;
+      }
+    }
+    &__wrapper {
+      &--horizontal {
+        margin-bottom: -2px;
+        margin-right: 12px;
+      }
+      &--vertical {
+        margin-right: -2px;
+      }
+
+    }
+  }
+}
+
+.sub-menu {
+  position: relative;
+  &-group {
+    position: relative;
+  }
+  &__wrapper {
+    &--horizontal {
+      /*position: absolute;
+      top: 110%;
+      left: 0;
+      padding: 0;
+      margin: 0;
+      border: 2px solid #e5e5e5;
+      border-radius: 7px;*/
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border: 2px solid #e5e5e5;
+      border-radius: 15px;
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      padding: 0;
+      transform: translateX(-50%);
+      &:after {
+        z-index: -5;
+        content:'';
+        display: block;
+        position:absolute;
+        bottom:92%;
+        left:50%;
+        border-radius: 3px;
+        transform: translateX(-50%) rotate(45deg);
+        padding:.7rem;
+        border-width:2px;
+        border-style:solid;
+        border-color: #e5e5e5;
+        background-color: #ffffff;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+      }
+      & .menu-item {
+        display: block;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: .8px;
+        cursor: pointer;
+        width: 150px;
+        &.is-active {
+          background-color: #ddf4ff;
+          color: #1cb0f6;
+        }
+        &:hover {
+          background-color: #f7f7f7;
+          &.is-active {
+            background-color: #ddf4ff;
+            color: #1cb0f6;
+          }
+        }
+        &:first-child{
+          border-top-left-radius: 14px;
+          border-top-right-radius: 14px;
+        }
+        &:last-child {
+          margin-bottom: -2px;
+          border-bottom: 2px solid #e5e5e5;
+          border-bottom-left-radius: 14px;
+          border-bottom-right-radius: 14px;
+        }
+        &:not(:last-child) {
+          border-bottom: 2px solid #e5e5e5;
+        }
+      }
+    }
+    &--vertical {
+      padding: 12px 0 0 0;
+      margin: 0;
+      & .menu-item {
+        border-right: none;
+        padding-left: 60px;
+        margin-right: -2px;
+        border-right: 2px solid #e5e5e5;
+        &:hover {
+          background-color: #f7f7f7;
+          color: #777777;
+          &.is-active {
+            background-color: #ddf4ff;
+            color: #1cb0f6;
+          }
+        }
+        /*&:active {
+          background-color: #ddf4ff;
+          color: #1cb0f6;
+        }*/
+        &.is-active {
+          background-color: #ddf4ff;
+          color: #1cb0f6;
+          border-right: 2px solid #1cb0f6;
+        }
+      }
+    }
+  }
+}
+.spread-icon {
+  display: inline-block;
+  height: 6px;
+  width: 10px;
+  margin-left: 8px;
+  color: black;
+  &.is-spread svg {
+    transform: rotate(180deg);
+  }
+  &.is-color svg > path {
+      fill: #1cb0f6;
+    }
+  & svg {
+    transition: transform 0.2s ease-in-out;
+    height: 6px;
+    width: 10px;
+  }
+}

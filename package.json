@@ -1,0 +1,64 @@
+{
+  "name": "benefit-admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@better-scroll/core": "^2.3.1",
+    "@nivo/calendar": "^0.70.0",
+    "@nivo/core": "^0.70.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-transition-group": "^4.4.1",
+    "@types/styled-components": "^5.1.9",
+    "classnames": "^2.2.6",
+    "fastclick": "^1.0.6",
+    "nanoid": "^3.1.22",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dnd": "^14.0.2",
+    "react-dnd-html5-backend": "^14.0.0",
+    "react-dom": "^17.0.1",
+    "react-highlight": "^0.14.0",
+    "react-scripts": "4.0.3",
+    "react-transition-group": "^4.4.1",
+    "recharts": "^2.0.9",
+    "styled-components": "^5.2.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/fastclick": "^1.0.29",
+    "@types/react-router-dom": "^5.1.7",
+    "react-router-dom": "^5.2.0"
+  }
+}
